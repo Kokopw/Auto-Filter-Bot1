@@ -108,12 +108,12 @@ SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', True)
 
 #premium info
-PAYMENT_QR = environ.get('PAYMENT_QR', 'http://graph.org/file/cacbbea472e5a48ce0d64.jpg')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'sampleupi@upi')
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://envs.sh/ZNX.jpg')
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'charliewatson@axl')
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', True)
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002402279066")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
