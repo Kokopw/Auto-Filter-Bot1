@@ -35,7 +35,8 @@ async def pm_search(client, message):
             await message.reply_text('<b><i>📢 ꜱᴇɴᴅ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ 👇</i></b>', reply_markup=reply_markup)
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
-async def group_search(client, message):
+async def group_search(client, message): 
+    if message.text.startswith("/"): return
     try:
         client_id = (await client.get_me()).id
         vp = await client.get_chat_member(message.chat.id, client_id)
